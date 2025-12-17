@@ -1,0 +1,52 @@
+.react-calendar {
+    width: 100% !important;
+    height: 100% !important;
+    font-family: 'Inter', sans-serif;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.react-calendar__tile {
+    height: 80px !important;
+    line-height: 1.2 !important;
+    /* smaller line-height to allow space for dots */
+    border-radius: 1rem;
+    transition: all 0.2s ease;
+    position: relative;
+    padding: 0.5rem !important;
+    display: flex;
+    flex-direction: column;
+    /* stack number and dots vertically */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.react-calendar__tile--now {
+    background: #5ca4ce;
+    color: #fff;
+    font-weight: bold;
+}
+
+.react-calendar__tile--active {
+    background: linear-gradient(to bottom right, #9333ea, #4f46e5);
+    color: white;
+    border-radius: 1rem;
+    transform: scale(1.05);
+}
+
+/* Dots container inside tileContent */
+.react-calendar__tile div {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+    /* space below the date number */
+    gap: 3px;
+}
+
+.react-calendar__tile div span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
